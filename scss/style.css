@@ -1,0 +1,926 @@
+@charset "UTF-8";
+@font-face {
+  font-family: 'Lato';
+  src: url("../fonts/Lato-Light.eot");
+  src: local("☺"), url("../fonts/Lato-Light.woff") format("woff"), url("../fonts/Lato-Light.ttf") format("truetype"), url("../fonts/Lato-Light.svg") format("svg");
+  font-weight: 300;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Lato';
+  src: url("../fonts/Lato-Medium.eot");
+  src: local("☺"), url("../fonts/Lato-Medium.woff") format("woff"), url("../fonts/Lato-Medium.ttf") format("truetype"), url("../fonts/Lato-Medium.svg") format("svg");
+  font-weight: 500;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Lato';
+  src: url("../fonts/Lato-Regular.eot");
+  src: local("☺"), url("../fonts/Lato-Regular.woff") format("woff"), url("../fonts/Lato-Regular.ttf") format("truetype"), url("../fonts/Lato-Regular.svg") format("svg");
+  font-weight: 400;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Mazzard';
+  src: url("../fonts/MazzardH-SemiBold.eot");
+  src: local("☺"), url("../fonts/MazzardH-SemiBold.woff") format("woff"), url("../fonts/MazzardH-SemiBold.ttf") format("truetype"), url("../fonts/MazzardH-SemiBold.svg") format("svg");
+  font-weight: 600;
+  font-style: normal;
+}
+
+*,
+*::before,
+*::after {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+body {
+  overflow-x: hidden;
+  font-size: 16px;
+  font-family: 'Lato', sans-serif;
+  color: #393A4E;
+}
+
+.container {
+  max-width: 1180px;
+  margin: 0 auto;
+  padding: 0 20px 0;
+}
+
+.title {
+  font-family: 'Mazzard', sans-serif;
+  font-style: normal;
+  font-weight: 600;
+  font-size: 28px;
+  line-height: 120%;
+  opacity: 0.8;
+  text-align: center;
+}
+
+.application {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.application__link {
+  display: inline-block;
+  height: 48px;
+  width: 162px;
+  background-repeat: no-repeat;
+  -webkit-transition: opacity 150ms linear;
+  transition: opacity 150ms linear;
+}
+
+.application__link:hover,
+.application__link :focus,
+.application__link :active {
+  opacity: 0.7;
+}
+
+#app-store {
+  background-image: url(../img/app-store.jpg);
+}
+
+#google-play {
+  background-image: url(../img/google-play.jpg);
+  margin-right: 16px;
+}
+
+ul {
+  list-style: none;
+  padding: 0;
+}
+
+a {
+  text-decoration: none;
+}
+
+p {
+  margin: 0;
+}
+
+.header {
+  margin: 72px 0 70px;
+  z-index: 10;
+  width: 100%;
+}
+
+.header__inner {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.header__link {
+  color: #393A4E;
+  border-bottom: 1px solid #000;
+  margin-right: 40px;
+  font-weight: 300;
+  -webkit-transition: opacity 130ms linear;
+  transition: opacity 130ms linear;
+}
+
+.header__link:hover,
+.header__link :active,
+.header__link :focus {
+  opacity: 0.7;
+}
+
+.header__btn {
+  font-family: 'Mazzard', sans-serif;
+  border: 1px solid #EC7B7A;
+  border-radius: 4px;
+  -webkit-transition: background 200ms linear;
+  transition: background 200ms linear;
+  color: #393A4E;
+  font-weight: 500;
+  padding: 18px 19px 19px 30px;
+}
+
+.header__btn:hover,
+.header__btn :active,
+.header__btn :focus {
+  background: rgba(255, 166, 0, 0.904);
+}
+
+.intro {
+  min-height: 619px;
+  margin-bottom: 125px;
+}
+
+.intro__inner {
+  padding-top: 50px;
+  position: relative;
+}
+
+.intro__title {
+  max-width: 556px;
+  font-family: 'Mazzard', sans-serif;
+  font-style: normal;
+  font-weight: 600;
+  font-size: 44px;
+  line-height: 140%;
+  margin-bottom: 21px;
+}
+
+.intro__text {
+  max-width: 462px;
+  font-weight: normal;
+  font-size: 24px;
+  line-height: 120%;
+  opacity: 0.6;
+  margin-bottom: 80px;
+}
+
+.intro__link {
+  color: #ec7c7ad8;
+  -webkit-transition: color 150ms linear;
+  transition: color 150ms linear;
+}
+
+.intro__link:hover,
+.intro__link :active,
+.intro__link :focus {
+  color: #f52724;
+}
+
+.intro__btn {
+  font-family: 'Mazzard';
+  font-weight: 600;
+  line-height: 120%;
+  border-radius: 4px;
+  border: 0;
+  -webkit-transition: background 150ms linear;
+  transition: background 150ms linear;
+  color: #FFFFFF;
+  background: #EC7B7A;
+  font-size: 18px;
+  padding: 19px 85px;
+}
+
+.intro__btn:hover,
+.intro__btn :active,
+.intro__btn :focus {
+  background: #fd5957;
+}
+
+.intro__app {
+  display: none;
+}
+
+.intro__img {
+  position: absolute;
+  height: 619px;
+  width: 742px;
+  -o-object-fit: contain;
+     object-fit: contain;
+  top: 0;
+  right: -148px;
+  z-index: -1;
+}
+
+.classes {
+  position: relative;
+  margin-bottom: 174px;
+}
+
+.classes__title {
+  margin-bottom: 116px;
+}
+
+.classes__cards {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.classes__card {
+  position: relative;
+  background: #FDFCFC;
+  border: 1px solid rgba(0, 0, 0, 0.2);
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  -webkit-box-shadow: 3px 3px 20px rgba(78, 24, 30, 0.05);
+          box-shadow: 3px 3px 20px rgba(78, 24, 30, 0.05);
+  border-radius: 12px;
+  min-height: 170px;
+  width: 240px;
+  padding: 85px 33px 0;
+}
+
+.classes__text {
+  font-weight: 500;
+  font-size: 18px;
+  line-height: 120%;
+  text-align: center;
+  opacity: 0.6;
+}
+
+.classes__img {
+  position: absolute;
+  left: 50%;
+  top: 0;
+  -webkit-transform: translate(-50%, -45%);
+          transform: translate(-50%, -45%);
+}
+
+.classes::before {
+  content: '';
+  position: absolute;
+  height: 476px;
+  width: 476px;
+  top: 0;
+  left: -25px;
+  background: radial-gradient(50% 50% at 50% 50%, #EFBDBE 0%, rgba(239, 189, 190, 0) 100%);
+  opacity: 0.2;
+  -webkit-filter: blur(100px);
+          filter: blur(100px);
+}
+
+.classes::after {
+  content: '';
+  position: absolute;
+  height: 476px;
+  width: 476px;
+  top: 0;
+  right: -25px;
+  background: radial-gradient(50% 50% at 50% 50%, #EFBDBE 0%, rgba(239, 189, 190, 0) 100%);
+  opacity: 0.2;
+  -webkit-filter: blur(100px);
+          filter: blur(100px);
+}
+
+.invitation {
+  position: relative;
+  min-height: 541px;
+  background: #FBF2F3;
+  margin-bottom: 108px;
+}
+
+.invitation__inner {
+  padding: 56px 0;
+  position: relative;
+}
+
+.invitation__title {
+  position: relative;
+  font-family: 'Mazzard';
+  font-style: normal;
+  font-weight: 600;
+  font-size: 42px;
+  line-height: 120%;
+  opacity: 0.8;
+  max-width: 634px;
+  margin-bottom: 16px;
+  z-index: 3;
+}
+
+.invitation__text {
+  position: relative;
+  font-weight: 500;
+  font-size: 18px;
+  line-height: 120%;
+  opacity: 0.6;
+  max-width: 646px;
+  margin-bottom: 87px;
+  z-index: 3;
+}
+
+.invitation__span {
+  color: #f36360d8;
+}
+
+.invitation__btn {
+  font-family: 'Mazzard';
+  font-weight: 600;
+  line-height: 120%;
+  border-radius: 4px;
+  border: 0;
+  -webkit-transition: background 150ms linear;
+  transition: background 150ms linear;
+  color: #FFFFFF;
+  background: #EC7B7A;
+  padding: 19px 44px;
+  font-size: 18px;
+}
+
+.invitation__btn:hover,
+.invitation__btn :active,
+.invitation__btn :focus {
+  background: #fd5957;
+}
+
+.invitation__img {
+  position: absolute;
+  height: 460px;
+  width: 454px;
+  right: 3px;
+  top: 41px;
+}
+
+.invitation::before {
+  content: '';
+  position: absolute;
+  width: 100%;
+  height: 134px;
+  left: 0;
+  top: -77px;
+  background-image: url(../img/invitation-before.png);
+  background-repeat: no-repeat;
+  background-position-x: center;
+  z-index: 2;
+}
+
+.invitation::after {
+  content: '';
+  position: absolute;
+  width: 100%;
+  height: 133px;
+  left: 0;
+  bottom: -69px;
+  background-image: url(../img/invitation-after.png);
+  background-repeat: no-repeat;
+  background-position-x: center;
+  z-index: -1;
+}
+
+.trainings {
+  margin-bottom: 54px;
+}
+
+.trainings__title {
+  margin-bottom: 78px;
+}
+
+.trainings__card {
+  max-width: 1040px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  margin: 0 auto 32px;
+  padding: 42px 65px 15px 40px;
+  border-radius: 10px;
+  -webkit-box-shadow: 3px 3px 20px rgba(78, 24, 30, 0.1);
+          box-shadow: 3px 3px 20px rgba(78, 24, 30, 0.1);
+}
+
+.trainings__image {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  margin-right: 69px;
+}
+
+.trainings__description {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+.trainings__img {
+  width: 352px;
+  border-radius: 4px;
+  margin-bottom: 20px;
+}
+
+.trainings__desc {
+  max-width: 352px;
+  font-weight: 600;
+  font-size: 16px;
+  line-height: 120%;
+  opacity: 0.8;
+  margin-bottom: 10px;
+}
+
+.trainings__date {
+  font-weight: 600;
+  font-size: 18px;
+  line-height: 120%;
+  opacity: 0.8;
+  -webkit-box-flex: 2;
+      -ms-flex-positive: 2;
+          flex-grow: 2;
+}
+
+.trainings__date::before {
+  content: 'Дата ближайшей тренировки: ';
+  display: block;
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 120%;
+  opacity: 0.54;
+  margin-bottom: 10px;
+}
+
+.trainings__card-title {
+  font-weight: normal;
+  font-size: 30px;
+  line-height: 120%;
+  opacity: 0.8;
+  margin: 18px 0 7px;
+}
+
+.trainings__list {
+  margin-bottom: 8px;
+}
+
+.trainings__about {
+  max-width: 520px;
+  font-weight: normal;
+  font-size: 16px;
+  line-height: 120%;
+  opacity: 0.6;
+  margin-bottom: 10px;
+}
+
+.trainings__link {
+  font-weight: normal;
+  font-size: 16px;
+  line-height: 120%;
+  color: #393A4E;
+  border-bottom: 1px solid #000;
+  -ms-flex-item-align: start;
+      align-self: flex-start;
+  -webkit-transition: 100ms linear;
+  transition: 100ms linear;
+  margin-bottom: 44px;
+}
+
+.trainings__link:hover,
+.trainings__link :active,
+.trainings__link :focus {
+  opacity: 0.7;
+}
+
+.trainings__btns {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+}
+
+.trainings__btn_primary {
+  font-family: 'Mazzard';
+  font-weight: 600;
+  line-height: 120%;
+  border-radius: 4px;
+  border: 0;
+  -webkit-transition: background 150ms linear;
+  transition: background 150ms linear;
+  color: #FFFFFF;
+  background: #EC7B7A;
+  font-size: 16px;
+  padding: 19px 40px 16px;
+  margin-right: 27px;
+}
+
+.trainings__btn_primary:hover,
+.trainings__btn_primary :active,
+.trainings__btn_primary :focus {
+  background: #fd5957;
+}
+
+.trainings__btn_secondary {
+  font-family: 'Mazzard', sans-serif;
+  border: 1px solid #EC7B7A;
+  border-radius: 4px;
+  -webkit-transition: background 200ms linear;
+  transition: background 200ms linear;
+  color: #393A4E;
+  position: relative;
+  font-weight: 600;
+  font-size: 16px;
+  opacity: 0.8;
+  padding: 17px 26px 17px;
+  background: #FDFCFC;
+  margin-bottom: 40px;
+}
+
+.trainings__btn_secondary:hover,
+.trainings__btn_secondary :active,
+.trainings__btn_secondary :focus {
+  background: rgba(255, 166, 0, 0.904);
+}
+
+.trainings__btn_secondary::after {
+  content: 'Для участия скачайте приложение';
+  position: absolute;
+  left: 14px;
+  bottom: -25px;
+  font-weight: 500;
+  font-size: 11px;
+  line-height: 120%;
+  opacity: 0.5;
+}
+
+.footer {
+  border-top: 1px solid rgba(57, 58, 78, 0.1);
+  padding: 45px 57px;
+}
+
+.footer__inner {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.footer__text {
+  font-weight: 500;
+  font-size: 18px;
+  line-height: 120%;
+  opacity: 0.9;
+  margin-bottom: 20px;
+}
+
+.footer__info {
+  display: inline-block;
+  height: 28px;
+  font-weight: 500;
+  font-size: 18px;
+  line-height: 120%;
+  color: rgba(56, 57, 77, 0.6);
+  margin-right: 20px;
+  padding-left: 38px;
+  background-position: left center;
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-image: url(../img/telegram.png);
+}
+
+.footer__info:last-child {
+  background-image: url(../img/mail.png);
+}
+
+@media screen and (max-width: 1050px) {
+  header {
+    display: none;
+  }
+  .intro {
+    text-align: center;
+  }
+  .intro__inner {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+  .intro__btn {
+    display: none;
+  }
+  .intro__text {
+    -webkit-box-ordinal-group: 2;
+        -ms-flex-order: 1;
+            order: 1;
+    margin-bottom: 35px;
+  }
+  .intro__app {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-ordinal-group: 3;
+        -ms-flex-order: 2;
+            order: 2;
+  }
+  .intro__img {
+    position: static;
+    margin-bottom: 50px;
+  }
+  .classes {
+    margin-bottom: 50px;
+  }
+  .classes__cards {
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+    -webkit-box-pack: space-evenly;
+        -ms-flex-pack: space-evenly;
+            justify-content: space-evenly;
+  }
+  .classes__card {
+    margin: 0 45px 60px;
+  }
+  .classes::before {
+    display: none;
+  }
+  .classes::after {
+    display: none;
+  }
+  .trainings__image {
+    position: relative;
+    margin-right: 30px;
+  }
+  .trainings__img {
+    width: 280px;
+  }
+  .trainings__date {
+    position: absolute;
+    left: 10px;
+    bottom: 15px;
+  }
+  .trainings__btn_secondary::after {
+    bottom: -35px;
+  }
+}
+
+@media screen and (max-width: 900px) {
+  .footer {
+    text-align: left;
+  }
+  .footer__inner {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+  .footer__social {
+    margin-bottom: 25px;
+  }
+}
+
+@media screen and (max-width: 800px) {
+  .intro__title {
+    font-size: 35px;
+    max-width: 450px;
+    margin-bottom: 30px;
+  }
+  .intro__img {
+    height: 500px;
+  }
+  .classes {
+    margin-bottom: 100px;
+  }
+  .classes__title {
+    margin-bottom: 50px;
+  }
+  .classes__cards {
+    display: block;
+  }
+  .classes__card {
+    width: 100%;
+    margin: 0 auto 20px;
+    padding: 10px 20px;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+  .classes__text {
+    text-align: left;
+  }
+  .classes__img {
+    -webkit-box-ordinal-group: 0;
+        -ms-flex-order: -1;
+            order: -1;
+    position: static;
+    width: 90px;
+    height: 70px;
+    -webkit-transform: translate(0);
+            transform: translate(0);
+    margin-right: 16px;
+  }
+  .invitation {
+    text-align: center;
+  }
+  .invitation__inner {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+  .invitation__title {
+    max-width: 85%;
+  }
+  .invitation__text {
+    max-width: 85%;
+  }
+  .invitation__img {
+    position: static;
+    margin-bottom: 40px;
+  }
+  .trainings__card {
+    display: block;
+    padding: 11px 20px 20px;
+    width: 65%;
+    margin: 0 auto 100px;
+  }
+  .trainings__card:last-child {
+    margin-bottom: 0;
+  }
+  .trainings__image {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    margin: 0;
+  }
+  .trainings__img {
+    width: 100%;
+  }
+  .trainings__date {
+    -webkit-box-ordinal-group: 0;
+        -ms-flex-order: -1;
+            order: -1;
+    position: static;
+    margin-bottom: 20px;
+  }
+  .trainings__desc {
+    -webkit-box-ordinal-group: -1;
+        -ms-flex-order: -2;
+            order: -2;
+    margin-bottom: 15px;
+  }
+  .trainings__card-title {
+    font-size: 20px;
+  }
+  .trainings__about {
+    font-size: 16px;
+  }
+  .trainings__link {
+    font-size: 16px;
+  }
+  .trainings__btns {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+  .trainings__btn_primary {
+    width: 100%;
+    margin: 0 0 15px;
+  }
+  .trainings__btn_secondary {
+    width: 100%;
+  }
+  .trainings__btn_secondary::after {
+    width: 100%;
+    text-align: center;
+  }
+}
+
+@media screen and (max-width: 550px) {
+  .intro {
+    margin-bottom: 50px;
+  }
+  .intro__title {
+    font-size: 22px;
+  }
+  .intro__img {
+    height: 310px;
+    width: 372px;
+  }
+  .intro__text {
+    font-size: 16px;
+  }
+  .intro__app {
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+  }
+  .intro #google-play {
+    margin: 0;
+  }
+  .classes__title {
+    font-size: 20px;
+  }
+  .classes__card {
+    min-height: 140px;
+    padding: 6px 10px;
+  }
+  .classes__img {
+    width: 64px;
+    height: 50px;
+    margin-right: 10px;
+  }
+  .classes__text {
+    line-height: 110%;
+  }
+  .invitation__title {
+    max-width: 100%;
+    font-size: 24px;
+    margin-bottom: 20px;
+  }
+  .invitation__text {
+    max-width: 100%;
+    font-size: 16px;
+  }
+  .invitation__img {
+    width: 224px;
+    height: 226px;
+  }
+  .trainings__title {
+    font-size: 20px;
+  }
+  .trainings__card {
+    width: 100%;
+  }
+  .footer {
+    padding: 0;
+  }
+  .footer__info {
+    margin-bottom: 10px;
+  }
+  .footer__app {
+    margin-bottom: 20px;
+  }
+  .footer .application__link {
+    margin: 0 !important;
+    height: 32px;
+    width: 112px;
+    background-size: contain;
+  }
+}
+/*# sourceMappingURL=style.css.map */

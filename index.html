@@ -1,0 +1,275 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Yoga Landing Page</title>
+    <!-- CSS -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css"
+        integrity="sha512-NhSC1YmyruXifcj/KFRWoC561YpHpc5Jtzgvbuzx5VozKpWvQ+4nXhPdFgmx8xqexRcpAglTj9sIBWINXa8x5w=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="./scss/style.css">
+    <!-- JavaScript -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script src="./js/app.js"></script>
+    <!-- Favicon -->
+    <link rel="apple-touch-icon" sizes="180x180" href="./favicon/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="./favicon/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="./favicon-16x16.png">
+    <link rel="manifest" href="./favicon/site.webmanifest">
+    <link rel="mask-icon" href="./favicon/safari-pinned-tab.svg" color="#5bbad5">
+    <meta name="msapplication-TileColor" content="#da532c">
+    <meta name="theme-color" content="#ffffff">
+</head>
+
+<body>
+
+    <!-- Header -->
+    <header class="header">
+        <div class="container">
+            <div class="header__inner">
+                <a href="#" class="header__link">Ближайшие тренировки</a>
+                <a href="#" class="header__btn">Получить бесплатное приглашение</a>
+            </div>
+        </div>
+    </header>
+
+    <!-- Intro -->
+    <section class="intro">
+        <div class="container">
+            <div class="intro__inner">
+                <h1 class="intro__title">Занимайся йогой онлайн с профессиональными тренерами</h1>
+                <p class="intro__text">Занятия проходят на платформе интерактивных эфиров <a href="https://webka.com/"
+                        target="_blank" class="intro__link">webka.com</a></p>
+                <a href="#" class="intro__btn">На сайт</a>
+                <div class="intro__app appliaction">
+                    <a href="" class="application__link" id="google-play"></a>
+                    <a href="" class="application__link" id="app-store"></a>
+                </div>
+                <picture>
+                    <source media="(max-width:330px)" srcset="./img/intro-img-mob.png">
+                    <img src="./img/intro-img.png" alt="Intro Image" class="intro__img">
+                </picture>
+            </div>
+        </div>
+    </section>
+
+    <!-- Classes -->
+    <section class="classes">
+        <div class="container">
+            <h3 class="classes__title title">Преимущества занятий с нами</h3>
+            <div class="classes__cards">
+
+                <!-- Card1 -->
+                <div class="classes__card">
+                    <p class="classes__text">Занятия в режиме реального времени!</p>
+                    <img src="./img/classes-1.jpg" alt="Card icon" class="classes__img">
+                </div>
+
+                <!-- Card2 -->
+                <div class="classes__card">
+                    <p class="classes__text">Индивидуальный подход!</p>
+                    <img src="./img/classes-2.jpg" alt="Card icon" class="classes__img">
+                </div>
+
+                <!-- Card3 -->
+                <div class="classes__card">
+                    <p class="classes__text">Всего 150 рублей занятие + останется запись тренировки!</p>
+                    <img src="./img/classes-3.jpg" alt="Card icon" class="classes__img">
+                </div>
+
+                <!-- Card4 -->
+                <div class="classes__card">
+                    <p class="classes__text">Первая тренировка бесплатно!</p>
+                    <img src="./img/classes-4.jpg" alt="Card icon" class="classes__img">
+                </div>
+            </div>
+
+        </div> <!-- Container -->
+    </section> <!-- Classes -->
+
+    <!-- Invitation -->
+    <section class="invitation">
+        <div class="container">
+            <div class="invitation__inner">
+                <h2 class="invitation__title">Получить бесплатное приглашение</h2>
+                <p class="invitation__text">Для того чтобы получить бесплатное приглашение, подпишись на наш телеграмм
+                    канал
+                    и скажи «Хочу бесплатное приглашение на йогу тренировку к <span class="invitation__span">имя
+                        тренера</span> » и вы получите бесплатное
+                    приглашение.</p>
+                <picture>
+                    <source media="(max-width:330px)" srcset="./img/invitation-img-mob.png">
+                    <img src="./img/invitation-img.png" alt="Invitation Image" class="invitation__img">
+                </picture>
+                <a href="#" class="invitation__btn">Ссылка на канал</a>
+            </div>
+        </div> <!-- Container -->
+    </section> <!-- Invitation -->
+
+    <!-- Trainings -->
+    <section class="trainings">
+
+        <h3 class="trainings__title title">Ближайшие тренировки</h3>
+
+        <!-- Card 1 -->
+        <div class="trainings__card">
+            <div class="trainings__image">
+                <img src="./img/trainings-1.jpg" alt="Card Image" class="trainings__img">
+                <p class="trainings__desc">Принципы безопасной растяжки.
+                    Как без травм быстро сесть на шпагат.</p>
+                <p class="trainings__date">23 марта 10:30</p>
+            </div>
+            <div class="trainings__description">
+                <h4 class="trainings__card-title">Левашов Вадим</h4>
+                <ul class="trainings__list">
+                    <li class="trainings__about">Йогой занимаюсь более 20 лет. Изучал китайские практики и классическую
+                        йогу, в последние годы продвигаю идеи клуба здравого образа жизни
+                    </li>
+                    <li class="trainings__about">Занимаясь с Вадимом йогой онлайн вы освоите дыхательные практики,
+                        научитесь работать с ощущениями, подберете для себя виньясы, последовательности и асаны для
+                        личной практики.
+                    </li>
+                </ul>
+                <a href="#" class="trainings__link">Посмотреть демо занятие</a>
+                <div class="trainings__btns">
+                    <button class="trainings__btn_primary">Буду участвовать</button>
+                    <button class="trainings__btn_secondary">Скачать приложение</button>
+                </div>
+            </div>
+        </div>
+
+        <!-- Card 2 -->
+        <div class="trainings__card">
+            <div class="trainings__image">
+                <img src="./img/trainings-2.jpg" alt="Card Image" class="trainings__img">
+                <p class="trainings__desc">Тема занятия: йога для начинающих</p>
+                <p class="trainings__date">23 марта 10:30</p>
+            </div>
+            <div class="trainings__description">
+                <h4 class="trainings__card-title">Юлия Верьялова</h4>
+                <ul class="trainings__list">
+                    <li class="trainings__about">Автономная некоммерческая организация дополнительного профессионального
+                        образования "Школа инструкторов йоги"</li>
+                    <li class="trainings__about">Удостоверение о повышении квалификации по направлению "Теория и
+                        практика
+                        хатха-йоги" (январь 2017 г)</li>
+                    <li class="trainings__about">Мама дочери 9 лет</li>
+                    <li class="trainings__about">Ведущий инструктор онлайн школы и ютуб канала YOGAwork</li>
+                </ul>
+                <a href="#" class="trainings__link">Посмотреть демо занятие</a>
+                <div class="trainings__btns">
+                    <button class="trainings__btn_primary">Буду участвовать</button>
+                    <button class="trainings__btn_secondary">Скачать приложение</button>
+                </div>
+            </div>
+        </div>
+
+        <!-- Card 3 -->
+        <div class="trainings__card">
+            <div class="trainings__image">
+                <img src="./img/trainings-3.jpg" alt="Card Image" class="trainings__img">
+                <p class="trainings__desc">Тема занятия: фитнес- йога</p>
+                <p class="trainings__date">23 марта 10:30</p>
+            </div>
+            <div class="trainings__description">
+                <h4 class="trainings__card-title">Мария Коншина</h4>
+                <ul class="trainings__list">
+                    <li class="trainings__about">Инструктор групповых программ: йога, фитнес.</li>
+                    <li class="trainings__about">Персональный тренер</li>
+                    <li class="trainings__about">Кандидат биологических наук</li>
+                    <li class="trainings__about">Старший преподаватель факультета физиологии и спортивной медицины.</li>
+                    <li class="trainings__about">Практикует более 12 лет, в качестве инструктора 10 лет.
+                    </li>
+                    <li class="trainings__about">Направления: хатха-йога, айенгар-йога, перинатальная йога (йога для
+                        беременных), аэро-йога (йога на гамаках), а также фитнес.</li>
+                    <li class="trainings__about">Куратор курсов по "Женскому счастью" и "Программ похудения".</li>
+                </ul>
+                <a href="#" class="trainings__link">Посмотреть демо занятие</a>
+                <div class="trainings__btns">
+                    <button class="trainings__btn_primary">Буду участвовать</button>
+                    <button class="trainings__btn_secondary">Скачать приложение</button>
+                </div>
+            </div>
+        </div>
+
+        <!-- Card 4 -->
+        <div class="trainings__card">
+            <div class="trainings__image">
+                <img src="./img/trainings-4.jpg" alt="Card Image" class="trainings__img">
+                <p class="trainings__desc">Тема занятия: здоровая спина</p>
+                <p class="trainings__date">23 марта 10:30</p>
+            </div>
+            <div class="trainings__description">
+                <h4 class="trainings__card-title">Анастасия Нименко</h4>
+                <ul class="trainings__list">
+                    <li class="trainings__about">Инструктор по адаптивной и лечебной физкультуре.
+                    </li>
+                    <li class="trainings__about">Тренер реабилитолог
+                    </li>
+                    <li class="trainings__about">Детский тренер оздоровительной и лечебной гимнастики, пилатес и фитнес
+                        для взрослых.</li>
+                    <li class="trainings__about">Практикует в качестве тренера 7 лет</li>
+                </ul>
+                <a href="#" class="trainings__link">Посмотреть демо занятие</a>
+                <div class="trainings__btns">
+                    <button class="trainings__btn_primary">Буду участвовать</button>
+                    <button class="trainings__btn_secondary">Скачать приложение</button>
+                </div>
+            </div>
+        </div>
+
+        <!-- Card 5 -->
+        <div class="trainings__card">
+            <div class="trainings__image">
+                <img src="./img/trainings-5.jpg" alt="Card Image" class="trainings__img">
+                <p class="trainings__desc">Тренировка по технологии 52.9 на всё тело</p>
+                <p class="trainings__date">23 марта 10:30</p>
+            </div>
+            <div class="trainings__description">
+                <h4 class="trainings__card-title">Игорь Самарин</h4>
+                <ul class="trainings__list">
+                    <li class="trainings__about">Артист Государственного академического ансамбля народного танца имени
+                        Игоря Моисеева
+                    </li>
+                    <li class="trainings__about">Онлайн-преподаватель йоги. Практикует тренировки по методике 52,9.
+                    </li>
+                </ul>
+                <a href="#" class="trainings__link">Посмотреть демо занятие</a>
+                <div class="trainings__btns">
+                    <button class="trainings__btn_primary">Буду участвовать</button>
+                    <button class="trainings__btn_secondary">Скачать приложение</button>
+                </div>
+            </div>
+        </div>
+
+    </section> <!-- Trainings -->
+
+
+    <footer class="footer">
+        <div class="container">
+            <div class="footer__inner">
+                <div class="footer__social">
+                    <p class="footer__text">Мы с радостью пообщаемся с вами, пишите:</p>
+                    <p class="footer__info">t.me/webkalive</p>
+                    <p class="footer__info">job@webka.com</p>
+                </div>
+                <div class="footer__app appliaction">
+                    <a href="" class="application__link footer__link" id="google-play"></a>
+                    <a href="" class="application__link footer__link" id="app-store"></a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+
+
+
+
+
+
+</body>
+
+</html>

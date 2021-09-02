@@ -1,0 +1,30 @@
+@mixin btn1() {
+    font-family: 'Mazzard';
+    font-weight: 600;
+    line-height: 120%;
+    border-radius: 4px;
+    border: 0;
+    transition: background 150ms linear;
+    color: #FFFFFF;
+    background: #EC7B7A;
+
+    &:hover,
+    :active,
+    :focus {
+        background: #fd5957;
+    }
+}
+
+@mixin btn2() {
+    font-family: 'Mazzard', sans-serif;
+    border: 1px solid #EC7B7A;
+    border-radius: 4px;
+    transition: background 200ms linear;
+    color: $textColor;
+
+    &:hover,
+    :active,
+    :focus {
+        background: rgba(255, 166, 0, 0.904);
+    }
+}

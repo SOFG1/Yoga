@@ -1,0 +1,906 @@
+/////////////////////////// General Styles ///////////////////////////
+
+@import 'variables';
+@import 'mixins';
+
+//Fonts Lato light
+@font-face {
+    font-family: 'Lato';
+    src: url('../fonts/Lato-Light.eot');
+    src: local('☺'), url('../fonts/Lato-Light.woff') format('woff'), url('../fonts/Lato-Light.ttf') format('truetype'), url('../fonts/Lato-Light.svg') format('svg');
+    font-weight: 300;
+    font-style: normal;
+}
+
+//Lato Medium
+@font-face {
+    font-family: 'Lato';
+    src: url('../fonts/Lato-Medium.eot');
+    src: local('☺'), url('../fonts/Lato-Medium.woff') format('woff'), url('../fonts/Lato-Medium.ttf') format('truetype'), url('../fonts/Lato-Medium.svg') format('svg');
+    font-weight: 500;
+    font-style: normal;
+}
+
+// Lato Regular
+@font-face {
+    font-family: 'Lato';
+    src: url('../fonts/Lato-Regular.eot');
+    src: local('☺'), url('../fonts/Lato-Regular.woff') format('woff'), url('../fonts/Lato-Regular.ttf') format('truetype'), url('../fonts/Lato-Regular.svg') format('svg');
+    font-weight: 400;
+    font-style: normal;
+}
+
+//Mazzard Semi-Bold
+@font-face {
+    font-family: 'Mazzard';
+    src: url('../fonts/MazzardH-SemiBold.eot');
+    src: local('☺'), url('../fonts/MazzardH-SemiBold.woff') format('woff'), url('../fonts/MazzardH-SemiBold.ttf') format('truetype'), url('../fonts/MazzardH-SemiBold.svg') format('svg');
+    font-weight: 600;
+    font-style: normal;
+}
+
+
+/////////////////////////////////////////////////////////////////////////////////
+
+
+
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+}
+
+body {
+    overflow-x: hidden;
+    font-size: 16px;
+    font-family: 'Lato', sans-serif;
+    color: $textColor;
+}
+
+.container {
+    max-width: 1180px;
+    margin: 0 auto;
+    padding: 0 20px 0;
+}
+
+.title {
+    font-family: 'Mazzard', sans-serif;
+    font-style: normal;
+    font-weight: 600;
+    font-size: 28px;
+    line-height: 120%;
+    opacity: 0.8;
+    text-align: center;
+}
+
+.application {
+    display: flex;
+    justify-content: space-between;
+
+    &__link {
+        display: inline-block;
+        height: 48px;
+        width: 162px;
+        background-repeat: no-repeat;
+        transition: opacity 150ms linear;
+
+        &:hover,
+        :focus,
+        :active {
+            opacity: 0.7;
+        }
+    }
+}
+
+#app-store {
+    background-image: url(../img/app-store.jpg);
+}
+
+#google-play {
+    background-image: url(../img/google-play.jpg);
+    margin-right: 16px;
+}
+
+ul {
+    list-style: none;
+    padding: 0;
+}
+
+a {
+    text-decoration: none;
+}
+
+p {
+    margin: 0;
+}
+
+
+//////////////////////////// General Styles End /////////////////////////////////////////////
+
+
+//////////////////////////// Header Styles Start /////////////////////////////////////////////
+
+.header {
+    margin: 72px 0 70px;
+    z-index: 10;
+    width: 100%;
+
+    &__inner {
+        display: flex;
+        justify-content: flex-end;
+        align-items: center;
+    }
+
+    &__link {
+        color: $textColor;
+        border-bottom: 1px solid #000;
+        margin-right: 40px;
+        font-weight: 300;
+        transition: opacity 130ms linear;
+
+        &:hover,
+        :active,
+        :focus {
+            opacity: 0.7;
+        }
+    }
+
+    &__btn {
+        @include btn2();
+        font-weight: 500;
+        padding: 18px 19px 19px 30px;
+    }
+}
+
+//////////////////////////// Header Styles End /////////////////////////////////////////////
+
+
+
+//////////////////////////// Intro Styles Start ///////////////////////////////////////////
+
+.intro {
+    min-height: 619px;
+    margin-bottom: 125px;
+
+    &__inner {
+        padding-top: 50px;
+        position: relative;
+    }
+
+    &__title {
+        max-width: 556px;
+        font-family: 'Mazzard', sans-serif;
+        font-style: normal;
+        font-weight: 600;
+        font-size: 44px;
+        line-height: 140%;
+        margin-bottom: 21px;
+    }
+
+    &__text {
+        max-width: 462px;
+        font-weight: normal;
+        font-size: 24px;
+        line-height: 120%;
+        opacity: 0.6;
+        margin-bottom: 80px;
+    }
+
+    &__link {
+        color: #ec7c7ad8;
+        transition: color 150ms linear;
+
+        &:hover,
+        :active,
+        :focus {
+            color: #f52724;
+        }
+    }
+
+    &__btn {
+        @include btn1();
+        font-size: 18px;
+        padding: 19px 85px;
+    }
+
+    &__app {
+        display: none;
+    }
+
+    &__img {
+        position: absolute;
+        height: 619px;
+        width: 742px;
+        object-fit: contain;
+        top: 0;
+        right: -148px;
+        z-index: -1;
+    }
+}
+
+
+
+//////////////////////////// Intro Styles End /////////////////////////////////////////////
+
+//////////////////////////// Classes Styles Start /////////////////////////////////////////
+
+.classes {
+    position: relative;
+    margin-bottom: 174px;
+
+    &__title {
+        margin-bottom: 116px;
+    }
+
+    &__cards {
+        display: flex;
+        justify-content: space-between;
+    }
+
+    &__card {
+        position: relative;
+        background: #FDFCFC;
+        border: 1px solid rgba(0, 0, 0, 0.2);
+        box-sizing: border-box;
+        box-shadow: 3px 3px 20px rgba(78, 24, 30, 0.05);
+        border-radius: 12px;
+        min-height: 170px;
+        width: 240px;
+        padding: 85px 33px 0;
+    }
+
+    &__text {
+        font-weight: 500;
+        font-size: 18px;
+        line-height: 120%;
+        text-align: center;
+        opacity: 0.6;
+    }
+
+    &__img {
+        position: absolute;
+        left: 50%;
+        top: 0;
+        transform: translate(-50%, -45%);
+    }
+
+    &::before {
+        content: '';
+        position: absolute;
+        height: 476px;
+        width: 476px;
+        top: 0;
+        left: -25px;
+        background: radial-gradient(50% 50% at 50% 50%, #EFBDBE 0%, rgba(239, 189, 190, 0) 100%);
+        opacity: 0.2;
+        filter: blur(100px);
+    }
+
+    &::after {
+        content: '';
+        position: absolute;
+        height: 476px;
+        width: 476px;
+        top: 0;
+        right: -25px;
+        background: radial-gradient(50% 50% at 50% 50%, #EFBDBE 0%, rgba(239, 189, 190, 0) 100%);
+        opacity: 0.2;
+        filter: blur(100px);
+    }
+}
+
+
+//////////////////////////// Classes Styles End ///////////////////////////////////////////
+
+
+//////////////////////////// Invitation Styles Start /////////////////////////////////////////
+
+.invitation {
+    position: relative;
+    min-height: 541px;
+    background: #FBF2F3;
+    margin-bottom: 108px;
+
+    &__inner {
+        padding: 56px 0;
+        position: relative;
+    }
+
+    &__title {
+        position: relative;
+        font-family: 'Mazzard';
+        font-style: normal;
+        font-weight: 600;
+        font-size: 42px;
+        line-height: 120%;
+        opacity: 0.8;
+        max-width: 634px;
+        margin-bottom: 16px;
+        z-index: 3;
+    }
+
+    &__text {
+        position: relative;
+        font-weight: 500;
+        font-size: 18px;
+        line-height: 120%;
+        opacity: 0.6;
+        max-width: 646px;
+        margin-bottom: 87px;
+        z-index: 3;
+    }
+
+    &__span {
+        color: #f36360d8;
+    }
+
+    &__btn {
+        @include btn1();
+        padding: 19px 44px;
+        font-size: 18px;
+    }
+
+    &__img {
+        position: absolute;
+        height: 460px;
+        width: 454px;
+        right: 3px;
+        top: 41px;
+    }
+
+    &::before {
+        content: '';
+        position: absolute;
+        width: 100%;
+        height: 134px;
+        left: 0;
+        top: -77px;
+        background-image: url(../img/invitation-before.png);
+        background-repeat: no-repeat;
+        background-position-x: center;
+        z-index: 2;
+    }
+
+    &::after {
+        content: '';
+        position: absolute;
+        width: 100%;
+        height: 133px;
+        left: 0;
+        bottom: -69px;
+        background-image: url(../img/invitation-after.png);
+        background-repeat: no-repeat;
+        background-position-x: center;
+        z-index: -1;
+    }
+}
+
+
+
+//////////////////////////// Invitation Styles End ///////////////////////////////////////////
+
+//////////////////////////// Trainings Styles Start //////////////////////////////////////////
+
+.trainings {
+    margin-bottom: 54px;
+
+    &__title {
+        margin-bottom: 78px;
+    }
+
+    &__card {
+        max-width: 1040px;
+        display: flex;
+        margin: 0 auto 32px;
+        padding: 42px 65px 15px 40px;
+        border-radius: 10px;
+        box-shadow: 3px 3px 20px rgba(78, 24, 30, 0.10);
+    }
+
+    &__image {
+        display: flex;
+        flex-direction: column;
+        margin-right: 69px;
+    }
+
+    &__description {
+        display: flex;
+        flex-direction: column;
+    }
+
+    &__img {
+        width: 352px;
+        border-radius: 4px;
+        margin-bottom: 20px;
+    }
+
+    &__desc {
+        max-width: 352px;
+        font-weight: 600;
+        font-size: 16px;
+        line-height: 120%;
+        opacity: 0.8;
+        margin-bottom: 10px;
+    }
+
+    &__date {
+        font-weight: 600;
+        font-size: 18px;
+        line-height: 120%;
+        opacity: 0.8;
+        flex-grow: 2;
+
+        &::before {
+            content: 'Дата ближайшей тренировки: ';
+            display: block;
+            font-weight: 500;
+            font-size: 14px;
+            line-height: 120%;
+            opacity: 0.54;
+            margin-bottom: 10px;
+        }
+    }
+
+    &__card-title {
+        font-weight: normal;
+        font-size: 30px;
+        line-height: 120%;
+        opacity: 0.8;
+        margin: 18px 0 7px;
+    }
+
+    &__list {
+        margin-bottom: 8px;
+    }
+
+    &__about {
+        max-width: 520px;
+        font-weight: normal;
+        font-size: 16px;
+        line-height: 120%;
+        opacity: 0.6;
+        margin-bottom: 10px;
+    }
+
+    &__link {
+        font-weight: normal;
+        font-size: 16px;
+        line-height: 120%;
+        color: $textColor;
+        border-bottom: 1px solid #000;
+        align-self: flex-start;
+        transition: 100ms linear;
+        margin-bottom: 44px;
+
+        &:hover,
+        :active,
+        :focus {
+            opacity: 0.7;
+        }
+    }
+
+    &__btns {
+        display: flex;
+        align-items: flex-start;
+    }
+
+    &__btn_primary {
+        @include btn1();
+        font-size: 16px;
+        padding: 19px 40px 16px;
+        margin-right: 27px;
+    }
+
+    &__btn_secondary {
+        @include btn2();
+        position: relative;
+        font-weight: 600;
+        font-size: 16px;
+        opacity: 0.8;
+        padding: 17px 26px 17px;
+        background: #FDFCFC;
+        margin-bottom: 40px;
+
+        &::after {
+            content: 'Для участия скачайте приложение';
+            position: absolute;
+            left: 14px;
+            bottom: -25px;
+            font-weight: 500;
+            font-size: 11px;
+            line-height: 120%;
+            opacity: 0.5;
+        }
+    }
+}
+
+
+
+
+
+
+
+//////////////////////////// Trainings Styles End ///////////////////////////////////////
+
+
+
+
+//////////////////////////// Footer Styles Start ////////////////////////////////////////
+
+.footer {
+    border-top: 1px solid rgba(57, 58, 78, 0.1);
+    padding: 45px 57px;
+
+    &__inner {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    &__text {
+        font-weight: 500;
+        font-size: 18px;
+        line-height: 120%;
+        opacity: 0.9;
+        margin-bottom: 20px;
+    }
+
+    &__info {
+        display: inline-block;
+        height: 28px;
+        font-weight: 500;
+        font-size: 18px;
+        line-height: 120%;
+        color: hsla(237, 16%, 26%, 0.6);
+        margin-right: 20px;
+        padding-left: 38px;
+        background-position: left center;
+        background-repeat: no-repeat;
+        background-size: contain;
+        background-image: url(../img/telegram.png);
+
+        &:last-child {
+            background-image: url(../img/mail.png);
+        }
+    }
+}
+
+
+
+
+//////////////////////////// Footer Styles End /////////////////////////////////////////
+
+
+/////////////////////////// Media Queries /////////////////////////////////////////////
+
+@media screen and (max-width:1050px) {
+
+    // 800 px
+    // Header 
+    header {
+        display: none;
+    }
+
+    // Intro
+    .intro {
+        text-align: center;
+
+        &__inner {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        &__btn {
+            display: none;
+        }
+
+        &__text {
+            order: 1;
+            margin-bottom: 35px;
+        }
+
+        &__app {
+            display: flex;
+            order: 2;
+        }
+
+        &__img {
+            position: static;
+            margin-bottom: 50px;
+        }
+    }
+
+    // Classes 
+    .classes {
+        margin-bottom: 50px;
+
+        &__cards {
+            flex-wrap: wrap;
+            justify-content: space-evenly;
+        }
+
+        &__card {
+            margin: 0 45px 60px;
+        }
+
+        &::before {
+            display: none;
+        }
+
+        &::after {
+            display: none;
+        }
+    }
+
+    // Trainings
+    .trainings {
+        &__image {
+            position: relative;
+            margin-right: 30px;
+        }
+
+        &__img {
+            width: 280px;
+        }
+
+        &__date {
+            position: absolute;
+            left: 10px;
+            bottom: 15px;
+        }
+
+        &__btn_secondary::after {
+            bottom: -35px;
+        }
+    }
+}
+
+
+@media screen and (max-width:900px) {
+
+    //footer 
+    .footer {
+        text-align: left;
+
+        &__inner {
+            flex-direction: column;
+        }
+
+        &__social {
+            margin-bottom: 25px;
+        }
+    }
+}
+
+
+@media screen and (max-width:800px) {
+    // 550px
+
+    // 550
+    //Intro
+    .intro {
+        &__title {
+            font-size: 35px;
+            max-width: 450px;
+            margin-bottom: 30px;
+        }
+
+        &__img {
+            height: 500px;
+        }
+    }
+
+    // Classes
+    .classes {
+        margin-bottom: 100px;
+
+        &__title {
+            margin-bottom: 50px;
+        }
+
+        &__cards {
+            display: block;
+        }
+
+        &__card {
+            width: 100%;
+            margin: 0 auto 20px;
+            padding: 10px 20px;
+            display: flex;
+            align-items: center;
+        }
+
+        &__text {
+            text-align: left;
+        }
+
+        &__img {
+            order: -1;
+            position: static;
+            width: 90px;
+            height: 70px;
+            transform: translate(0);
+            margin-right: 16px;
+        }
+    }
+
+    // Invitation
+    .invitation {
+        text-align: center;
+
+        &__inner {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        &__title {
+            max-width: 85%;
+        }
+
+        &__text {
+            max-width: 85%;
+        }
+
+        &__img {
+            position: static;
+            margin-bottom: 40px;
+        }
+    }
+
+    //Trainings
+    .trainings {
+        &__card {
+            display: block;
+            padding: 11px 20px 20px;
+            width: 65%;
+            margin: 0 auto 100px;
+
+            &:last-child {
+                margin-bottom: 0;
+            }
+        }
+
+        &__image {
+            display: flex;
+            flex-direction: column;
+            margin: 0;
+        }
+
+        &__img {
+            width: 100%;
+        }
+
+        &__date {
+            order: -1;
+            position: static;
+            margin-bottom: 20px;
+        }
+        &__desc {
+            order: -2;
+            margin-bottom: 15px;
+        }
+        &__card-title {
+            font-size: 20px;
+        }
+        &__about {
+            font-size: 16px;
+        }
+        &__link {
+            font-size: 16px;
+        }
+        &__btns {
+            flex-direction: column;
+            align-items: center;
+        }
+        &__btn_primary {
+            width: 100%;
+            margin:0 0 15px ;
+        }
+        &__btn_secondary {
+            width: 100%;
+            &::after {
+                width: 100%;
+                text-align: center;
+            }
+        }
+    }
+
+}
+
+
+@media screen and (max-width:550px) {
+
+    //320px
+    //Intro 
+    .intro {
+        margin-bottom: 50px;
+
+        &__title {
+            font-size: 22px;
+        }
+
+        &__img {
+            height: 310px;
+            width: 372px;
+        }
+
+        &__text {
+            font-size: 16px;
+        }
+
+        &__app {
+            flex-wrap: wrap;
+            justify-content: center;
+        }
+
+        #google-play {
+            margin: 0;
+        }
+    }
+
+    //Classes
+    .classes {
+        &__title {
+            font-size: 20px;
+        }
+
+        &__card {
+            min-height: 140px;
+            padding: 6px 10px;
+        }
+
+        &__img {
+            width: 64px;
+            height: 50px;
+            margin-right: 10px;
+        }
+        &__text {
+            line-height: 110%;
+        }
+    }
+
+    //Invitaion
+    .invitation {
+        &__title {
+            max-width: 100%;
+            font-size: 24px;
+            margin-bottom: 20px;
+        }
+        &__text {
+            max-width: 100%;
+            font-size: 16px;
+        }
+        &__img {
+            width: 224px;
+            height: 226px;
+        }
+    }
+
+    //Trainings
+    .trainings {
+        &__title {
+            font-size: 20px;
+        }
+        &__card {
+            width: 100%;
+        }
+    }
+    // Footer
+    .footer {
+        padding: 0;
+        &__info {
+            margin-bottom: 10px;
+        }
+        &__app {
+            margin-bottom: 20px;
+        }
+        .application__link {
+            margin: 0 !important;
+            height: 32px;
+            width: 112px;
+            background-size: contain;
+        }
+    }
+}
